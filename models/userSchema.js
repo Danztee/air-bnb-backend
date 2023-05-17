@@ -11,8 +11,8 @@ const userSchema = mongoose.Schema(
       required: [true, "please provide your last name"],
     },
     phoneNumber: { type: Number, unique: true },
-    email: { type: String, unique: true,  },
-    emailVerified: { type: Boolean,default: false },
+    email: { type: String, unique: true },
+    emailVerified: { type: Boolean, default: false },
     image: String,
     password: String,
 
@@ -21,7 +21,7 @@ const userSchema = mongoose.Schema(
     // listings: [Listings],
     // reservations: [Reservations],
   },
-  { timeStamps: true }
+  { timestamps: true }
 );
 
 module.exports = mongoose.model("User", userSchema);
